@@ -1,0 +1,2714 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    direction: rtl;
+    font-family: 'Vazirmatn', sans-serif;
+    background: #f7faff;
+    color: #172033;
+    line-height: 1.8;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+
+.container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+}
+
+
+/* Header */
+
+.site-header {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #e8edf5;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+}
+
+
+.navbar {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    color: #3b82c4;
+    white-space: nowrap;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+
+.nav-links a {
+    color: #536176;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+
+.nav-links a:hover {
+    color: #3b82c4;
+}
+
+
+.login-btn {
+    background: #4f91c7;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 12px;
+}
+
+
+.login-btn:hover {
+    background: #397eaf;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(48, 101, 145, 0.78),
+            rgba(91, 157, 205, 0.72)
+        ),
+        url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85')
+        center / cover;
+}
+
+
+.hero-content {
+    padding: 80px 0 100px;
+}
+
+
+.hero h1 {
+    color: white;
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1.25;
+    font-weight: 800;
+    max-width: 650px;
+    margin-bottom: 18px;
+}
+
+
+.hero p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 18px;
+    margin-bottom: 38px;
+}
+
+
+/* Search */
+
+.search-box {
+    background: white;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 20px 60px rgba(17, 55, 100, 0.14);
+}
+
+
+.search-tabs {
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+    border-bottom: 1px solid #edf1f7;
+}
+
+
+.search-tabs button {
+    border: none;
+    background: transparent;
+    color: #69778c;
+    padding: 12px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.search-tabs button.active {
+    background: #edf5fb;
+    color: #3b82c4;
+}
+
+
+.search-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr auto;
+    gap: 10px;
+    padding: 18px 8px 8px;
+}
+
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+
+.field label {
+    font-size: 12px;
+    color: #69778c;
+    font-weight: 600;
+}
+
+
+.field select,
+.field input {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #dfe6ef;
+    border-radius: 11px;
+    background: white;
+    color: #263348;
+    padding: 0 13px;
+    outline: none;
+}
+
+
+.field select:focus,
+.field input:focus {
+    border-color: #8bb9da;
+    box-shadow: 0 0 0 3px rgba(91, 157, 205, 0.12);
+}
+
+
+.search-btn {
+    height: 48px;
+    border: none;
+    border-radius: 11px;
+    padding: 0 24px;
+    background: #4f91c7;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+
+.search-btn:hover {
+    background: #397eaf;
+}
+
+
+/* Sections */
+
+.section {
+    padding: 90px 0;
+}
+
+
+.section-title {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+
+.section-title p {
+    color: #718096;
+    font-size: 15px;
+}
+
+
+/* Cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+.card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #e8edf5;
+    box-shadow: 0 8px 30px rgba(35, 65, 100, 0.06);
+    transition: 0.25s;
+}
+
+
+.card:hover {
+    transform: translateY(-7px);
+}
+.card-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+
+.card-body {
+    padding: 22px;
+}
+
+
+.card-body h3 {
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+
+.card-body p {
+    color: #718096;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+
+.price {
+    color: #4f91c7;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* Features */
+
+.features {
+    background: white;
+}
+
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+.feature {
+    text-align: center;
+    padding: 35px 25px;
+    border: 1px solid #e8edf5;
+    border-radius: 18px;
+    background: #fbfdff;
+}
+
+
+.feature-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #edf5fb;
+    border-radius: 18px;
+    font-size: 27px;
+}
+
+
+.feature h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+
+.feature p {
+    color: #718096;
+    font-size: 14px;
+}
+
+
+/* Footer */
+
+.site-footer {
+    background: #182536;
+    color: white;
+    padding: 55px 0 20px;
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding-bottom: 35px;
+}
+
+
+.footer-brand {
+    max-width: 450px;
+}
+
+
+.footer-brand h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+
+.footer-brand p {
+    color: #aab5c7;
+    font-size: 14px;
+}
+
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+
+.footer-links a {
+    color: #c5cedb;
+    font-size: 14px;
+}
+
+
+.footer-links a:hover {
+    color: white;
+}
+
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 18px;
+    color: #8996aa;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/* Mobile */
+
+@media (max-width: 950px) {
+
+    .search-fields {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .cards,
+    .feature-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .nav-links a:not(.login-btn) {
+        display: none;
+    }
+
+
+    .hero-content {
+        padding: 65px 0 70px;
+    }
+
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+
+    .search-fields {
+        grid-template-columns: 1fr;
+    }
+
+
+    .cards,
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+
+    .footer-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+/* Travel Options */
+
+.travel-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 850px;
+    margin-top: 35px;
+}
+
+.travel-option {
+    display: block;
+    background: white;
+    color: #172033;
+    padding: 35px 30px;
+    border-radius: 22px;
+    text-align: center;
+    border: 1px solid #e8edf5;
+    box-shadow: 0 15px 40px rgba(17, 55, 100, 0.15);
+    transition: 0.25s ease;
+}
+
+.travel-option:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(17, 55, 100, 0.22);
+}
+
+.travel-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eaf3ff;
+    border-radius: 22px;
+    font-size: 38px;
+}
+
+.travel-option h2 {
+    font-size: 23px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.travel-option p {
+    color: #718096;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.travel-option .search-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 45px;
+    padding: 0 22px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .travel-options {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .travel-option {
+        padding: 30px 22px;
+    }
+
+    .travel-option h2 {
+        font-size: 21px;
+    }
+
+}
+
+/* User Navigation */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.nav-links a {
+    white-space: nowrap;
+}
+
+.login-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: #1264e8;
+    color: white !important;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.login-btn:hover {
+    background: #0d55c7;
+    transform: translateY(-1px);
+}
+
+
+/* My Trips */
+
+.nav-links a[href="/my-trips"] {
+    color: #1264e8;
+    background: #eaf3ff;
+    padding: 9px 14px;
+    border-radius: 10px;
+}
+
+.nav-links a[href="/my-trips"]:hover {
+    background: #dcecff;
+}
+
+
+/* Mobile Navigation */
+
+@media (max-width: 700px) {
+
+    .nav-links {
+        gap: 8px;
+    }
+
+    .nav-links a:not(.login-btn):not([href="/my-trips"]) {
+        display: none;
+    }
+
+    .nav-links a[href="/my-trips"] {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .login-btn {
+        font-size: 12px;
+        padding: 9px 12px;
+    }
+
+}
+
+/* Flight Results */
+
+.search-summary {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    background: white;
+    border: 1px solid #e8edf5;
+    border-radius: 18px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.search-summary div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.search-summary strong {
+    font-size: 12px;
+    color: #718096;
+}
+
+.search-summary span {
+    font-size: 15px;
+    font-weight: 700;
+    color: #172033;
+}
+
+
+.flight-results {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+
+.flight-card {
+    background: white;
+    border: 1px solid #e8edf5;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 8px 30px rgba(35, 65, 100, 0.06);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1.5fr 1.5fr;
+    align-items: center;
+    gap: 25px;
+    transition: 0.2s ease;
+}
+
+.flight-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(35, 65, 100, 0.1);
+}
+
+
+.flight-airline {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.airline-logo {
+    width: 50px;
+    height: 50px;
+    background: #eaf3ff;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.flight-airline h3 {
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+
+.flight-airline p {
+    color: #718096;
+    font-size: 12px;
+}
+
+
+.flight-route {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.flight-route div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.flight-route strong {
+    font-size: 21px;
+}
+
+.flight-route span {
+    color: #718096;
+    font-size: 13px;
+}
+
+
+.flight-line {
+    flex: 1;
+    height: 1px;
+    background: #dfe6ef;
+    position: relative;
+}
+
+.flight-line span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 5px;
+    color: #1264e8;
+}
+
+
+.flight-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #718096;
+    font-size: 12px;
+}
+
+
+.flight-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.flight-price strong {
+    color: #1264e8;
+    font-size: 17px;
+}
+
+
+@media (max-width: 900px) {
+
+    .search-summary {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .flight-card {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .search-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .flight-card {
+        grid-template-columns: 1fr;
+    }
+
+    .flight-price {
+        align-items: stretch;
+    }
+
+    .flight-route {
+        gap: 10px;
+    }
+
+}
+
+.ticket-options {
+
+    display: flex;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 30px;
+
+}
+
+
+.ticket-option {
+
+    flex: 1;
+
+    min-width: 220px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 16px;
+
+    padding: 20px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.ticket-option:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+.ticket-option.selected {
+
+    border-color: #2563eb;
+
+    background: #eff6ff;
+
+}
+
+
+.ticket-option h3 {
+
+    margin-top: 0;
+
+}
+
+
+.ticket-price {
+
+    font-weight: bold;
+
+    margin-top: 10px;
+
+}
+
+
+.plane {
+
+    max-width: 650px;
+
+    margin: 30px auto;
+
+    padding: 30px;
+
+    background: #f8fafc;
+
+    border-radius: 40px;
+
+}
+
+
+.cockpit {
+
+    text-align: center;
+
+    font-size: 28px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.seat-row {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.aisle {
+
+    width: 25px;
+
+}
+
+
+.seat {
+
+    width: 48px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    background: #22c55e;
+
+    color: white;
+
+    font-weight: bold;
+
+}
+
+
+.seat:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+.seat.selected {
+
+    background: #2563eb;
+
+}
+
+
+.seat.reserved {
+
+    background: #64748b;
+
+    cursor: not-allowed;
+
+}
+
+
+.vip-seat {
+
+    border: 3px solid #f59e0b;
+
+}
+
+
+.legend {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    margin-top: 25px;
+
+}
+
+
+.legend-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+}
+
+
+.legend-box {
+
+    width: 20px;
+
+    height: 20px;
+
+    border-radius: 5px;
+
+}
+
+
+.legend-free {
+
+    background: #22c55e;
+
+}
+
+
+.legend-selected {
+
+    background: #2563eb;
+
+}
+
+
+.legend-reserved {
+
+    background: #64748b;
+
+}
+
+
+.selected-seat {
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    font-weight: bold;
+
+}
+
+/* =========================================
+Train Seat Selection
+========================================= */
+
+.train-summary {
+margin-bottom: 24px;
+}
+
+.train-summary p {
+margin: 8px 0;
+}
+
+/* راهنمای صندلی‌ها */
+
+.seat-legend {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+gap: 10px;
+margin: 25px 0;
+}
+
+.seat-legend span {
+display: inline-block;
+padding: 8px 14px;
+border-radius: 8px;
+font-size: 14px;
+}
+
+.legend-free {
+background: #e9f7ef;
+color: #198754;
+}
+
+.legend-reserved {
+background: #f8d7da;
+color: #842029;
+}
+
+.legend-selected {
+background: #cfe2ff;
+color: #084298;
+}
+
+.legend-vip {
+background: #fff8dc;
+color: #8a6d00;
+}
+
+/* لیست کوپه‌ها */
+
+.coach-list {
+display: flex;
+flex-direction: column;
+gap: 15px;
+margin-top: 25px;
+}
+
+.coach-card {
+background: #ffffff;
+border: 1px solid #dddddd;
+border-radius: 16px;
+overflow: hidden;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* دکمه کوپه */
+
+.coach-button {
+width: 100%;
+border: none;
+background: #ffffff;
+padding: 20px;
+cursor: pointer;
+font-family: inherit;
+text-align: right;
+}
+
+.coach-button:hover {
+background: #f8f9fa;
+}
+
+.coach-content {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 15px;
+}
+
+.coach-name {
+font-size: 18px;
+font-weight: bold;
+margin-bottom: 7px;
+}
+
+.coach-info {
+color: #777777;
+font-size: 14px;
+}
+
+.coach-arrow {
+font-size: 20px;
+transition: transform 0.2s ease;
+}
+
+.coach-card.open .coach-arrow {
+transform: rotate(180deg);
+}
+
+/* قسمت صندلی‌ها */
+
+.coach-seats {
+display: none;
+padding: 25px;
+background: #fafafa;
+border-top: 1px solid #eeeeee;
+}
+
+.coach-card.open .coach-seats {
+display: block;
+}
+
+.coach-seats h3 {
+text-align: center;
+margin: 0 0 25px;
+}
+
+/* چیدمان صندلی‌ها */
+
+.seat-grid {
+max-width: 430px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 15px;
+}
+
+.seat {
+position: relative;
+}
+
+.seat input {
+display: none;
+}
+
+.seat label {
+min-height: 65px;
+padding: 10px;
+border: 2px solid #198754;
+border-radius: 12px;
+background: #e9f7ef;
+color: #198754;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 4px;
+cursor: pointer;
+transition: all 0.2s ease;
+}
+
+.seat label:hover {
+transform: translateY(-2px);
+background: #d9f2e4;
+}
+
+/* صندلی انتخاب‌شده */
+
+.seat input:checked + label {
+background: #0d6efd;
+border-color: #0d6efd;
+color: #ffffff;
+}
+
+/* صندلی رزرو شده */
+
+.seat-reserved {
+min-height: 65px;
+padding: 10px;
+border: 2px solid #dc3545;
+border-radius: 12px;
+background: #f8d7da;
+color: #842029;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 4px;
+}
+
+/* صندلی VIP */
+
+.seat-vip label {
+background: #fff8dc;
+border-color: #d4af37;
+color: #8a6d00;
+}
+
+.seat-vip label:hover {
+background: #fff3bd;
+}
+
+/* صندلی انتخاب‌شده VIP */
+
+.seat-vip input:checked + label {
+background: #0d6efd;
+border-color: #0d6efd;
+color: #ffffff;
+}
+
+/* نمایش صندلی انتخاب‌شده */
+
+.selected-seat-box {
+max-width: 430px;
+margin: 25px auto 0;
+padding: 15px;
+border-radius: 12px;
+background: #f1f5f9;
+text-align: center;
+}
+
+.selected-seat-box p {
+margin: 0;
+font-weight: bold;
+}
+
+/* دکمه ادامه */
+
+.continue-button {
+display: block;
+width: 100%;
+max-width: 430px;
+margin: 20px auto 0;
+padding: 15px;
+border: none;
+border-radius: 12px;
+font-family: inherit;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+}
+
+/* موبایل */
+
+@media (max-width: 600px) {
+
+.coach-button {
+    padding: 16px;
+}
+
+.coach-name {
+    font-size: 16px;
+}
+
+.coach-info {
+    font-size: 13px;
+}
+
+.coach-seats {
+    padding: 18px;
+}
+
+.seat-grid {
+    gap: 10px;
+}
+
+.seat label,
+.seat-reserved {
+    min-height: 58px;
+    font-size: 13px;
+}
+
+}
+
+/* =========================================
+Train Seat Selection
+========================================= */
+
+/* خلاصه سفر */
+
+.train-summary {
+margin-bottom: 24px;
+}
+
+.train-summary p {
+margin: 8px 0;
+}
+
+/* =========================================
+راهنمای صندلی‌ها
+========================================= */
+
+.seat-legend {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+gap: 10px;
+margin: 25px 0;
+}
+
+.seat-legend span {
+display: inline-block;
+padding: 8px 14px;
+border-radius: 8px;
+font-size: 14px;
+}
+
+.legend-free {
+background: #e9f7ef;
+color: #198754;
+}
+
+.legend-reserved {
+background: #f8d7da;
+color: #842029;
+}
+
+.legend-selected {
+background: #cfe2ff;
+color: #084298;
+}
+
+.legend-vip {
+background: #fff8dc;
+color: #8a6d00;
+}
+
+/* =========================================
+لیست کوپه‌ها
+========================================= */
+
+.coach-list {
+display: flex;
+flex-direction: column;
+gap: 15px;
+margin-top: 25px;
+}
+
+.coach-card {
+background: #ffffff;
+border: 1px solid #dddddd;
+border-radius: 18px;
+overflow: hidden;
+
+box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.05);
+
+transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+
+}
+
+.coach-card:hover {
+box-shadow:
+0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================
+دکمه کوپه
+========================================= */
+
+.coach-button {
+width: 100%;
+
+border: none;
+
+background: #ffffff;
+
+padding: 20px;
+
+cursor: pointer;
+
+font-family: inherit;
+
+text-align: right;
+
+transition:
+    background 0.2s ease;
+
+}
+
+.coach-button:hover {
+background: #f8faf9;
+}
+
+.coach-content {
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+gap: 15px;
+
+}
+
+.coach-name {
+font-size: 18px;
+
+font-weight: bold;
+
+margin-bottom: 7px;
+
+}
+
+.coach-info {
+color: #777777;
+
+font-size: 14px;
+
+}
+
+.coach-arrow {
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+width: 34px;
+height: 34px;
+
+border-radius: 50%;
+
+background: #f1f5f3;
+
+color: #198754;
+
+font-size: 16px;
+
+transition:
+    transform 0.25s ease,
+    background 0.2s ease;
+
+}
+
+.coach-card.open .coach-arrow {
+transform: rotate(180deg);
+
+background: #e9f7ef;
+
+}
+
+/* =========================================
+قسمت صندلی‌های کوپه
+========================================= */
+
+.coach-seats {
+display: none;
+
+padding: 28px;
+
+background:
+    linear-gradient(
+        180deg,
+        #fafafa,
+        #f4f6f5
+    );
+
+border-top: 1px solid #eeeeee;
+
+}
+
+.coach-card.open .coach-seats {
+display: block;
+}
+
+.coach-seats h3 {
+text-align: center;
+
+margin: 0 0 25px;
+
+font-size: 17px;
+
+}
+
+/* =========================================
+چیدمان صندلی‌ها
+========================================= */
+
+.seat-grid {
+max-width: 440px;
+
+margin: 25px auto;
+
+display: grid;
+
+grid-template-columns:
+    repeat(2, 1fr);
+
+gap: 18px;
+
+}
+
+/* =========================================
+صندلی آزاد
+========================================= */
+
+.seat {
+position: relative;
+}
+
+.seat input {
+display: none;
+}
+
+.seat label {
+position: relative;
+
+min-height: 78px;
+
+padding: 12px;
+
+border: 2px solid #d8e5df;
+
+border-radius: 16px;
+
+background:
+    linear-gradient(
+        145deg,
+        #ffffff,
+        #eef8f2
+    );
+
+color: #176b45;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+
+justify-content: center;
+
+gap: 5px;
+
+cursor: pointer;
+
+font-weight: 600;
+
+box-shadow:
+    0 5px 12px
+    rgba(0, 0, 0, 0.06);
+
+transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+
+}
+
+/* شماره صندلی */
+
+.seat label strong {
+font-size: 20px;
+}
+
+/* هاور صندلی آزاد */
+
+.seat label:hover {
+transform: translateY(-3px);
+
+border-color: #198754;
+
+box-shadow:
+    0 8px 18px
+    rgba(25, 135, 84, 0.16);
+
+}
+
+/* =========================================
+صندلی انتخاب شده
+========================================= */
+
+.seat input:checked + label {
+background:
+linear-gradient(
+145deg,
+#0d6efd,
+#3d8bfd
+);
+
+border-color: #0d6efd;
+
+color: #ffffff;
+
+box-shadow:
+    0 8px 20px
+    rgba(13, 110, 253, 0.30);
+
+transform: translateY(-3px);
+
+}
+
+/* علامت تیک صندلی انتخاب شده */
+.seat input:checked + label::after {
+content: "✓";
+
+position: absolute;
+
+top: 7px;
+left: 9px;
+
+width: 22px;
+height: 22px;
+
+border-radius: 50%;
+
+background: #ffffff;
+
+color: #0d6efd;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+font-size: 13px;
+
+font-weight: bold;
+
+}
+
+/* =========================================
+صندلی رزرو شده
+========================================= */
+
+.seat-reserved {
+min-height: 78px;
+
+padding: 12px;
+
+border: 2px solid #f0b8bd;
+
+border-radius: 16px;
+
+background:
+    linear-gradient(
+        145deg,
+        #fff5f5,
+        #f8d7da
+    );
+
+color: #a52834;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+
+justify-content: center;
+
+gap: 5px;
+
+cursor: not-allowed;
+
+box-shadow:
+    0 5px 12px
+    rgba(220, 53, 69, 0.08);
+
+}
+
+/* شماره صندلی رزرو شده */
+
+.seat-reserved strong {
+font-size: 20px;
+}
+
+/* =========================================
+صندلی VIP
+========================================= */
+
+.seat-vip label {
+background:
+linear-gradient(
+145deg,
+#fffdf2,
+#fff3bd
+);
+
+border-color: #d4af37;
+
+color: #806500;
+
+}
+
+.seat-vip label:hover {
+border-color: #b89620;
+
+box-shadow:
+    0 8px 18px
+    rgba(212, 175, 55, 0.20);
+
+}
+
+/* VIP انتخاب شده */
+
+.seat-vip input:checked + label {
+background:
+linear-gradient(
+145deg,
+#0d6efd,
+#3d8bfd
+);
+
+border-color: #0d6efd;
+
+color: #ffffff;
+
+}
+
+/* =========================================
+صندلی انتخاب شده - خلاصه پایین صفحه
+========================================= */
+
+.selected-seat-box {
+max-width: 440px;
+
+margin: 25px auto 0;
+
+padding: 16px;
+
+border-radius: 14px;
+
+background: #f1f5f9;
+
+border: 1px solid #e2e8f0;
+
+text-align: center;
+
+box-shadow:
+    0 4px 10px
+    rgba(0, 0, 0, 0.03);
+
+}
+
+.selected-seat-box p {
+margin: 0;
+
+font-weight: bold;
+
+color: #334155;
+
+}
+
+/* =========================================
+دکمه ادامه رزرو
+========================================= */
+
+.continue-button {
+display: block;
+
+width: 100%;
+
+max-width: 440px;
+
+margin: 20px auto 0;
+
+padding: 15px;
+
+border: none;
+
+border-radius: 13px;
+
+font-family: inherit;
+
+font-size: 16px;
+
+font-weight: bold;
+
+cursor: pointer;
+
+transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+}
+
+.continue-button:hover {
+transform: translateY(-2px);
+
+box-shadow:
+    0 8px 18px
+    rgba(0, 0, 0, 0.12);
+
+}
+
+/* =========================================
+موبایل
+========================================= */
+
+@media (max-width: 600px) {
+
+.coach-button {
+    padding: 16px;
+}
+
+.coach-name {
+    font-size: 16px;
+}
+
+.coach-info {
+    font-size: 13px;
+}
+
+.coach-seats {
+    padding: 18px;
+}
+
+.seat-grid {
+    gap: 12px;
+}
+
+.seat label,
+.seat-reserved {
+    min-height: 68px;
+    border-radius: 14px;
+}
+
+.seat label strong,
+.seat-reserved strong {
+    font-size: 18px;
+}
+
+.coach-arrow {
+    width: 30px;
+    height: 30px;
+}
+
+}
+
+.coach-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.coach-card {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.coach-button {
+    width: 100%;
+    padding: 16px 18px;
+    border: 0;
+    background: #fff;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: right;
+}
+
+.coach-button:hover {
+    background: #fafafa;
+}
+
+.coach-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.coach-name {
+    margin: 0 0 5px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+}
+
+.coach-info {
+    margin: 0;
+    font-size: 13px;
+    color: #777;
+}
+
+.coach-arrow {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f1f1f1;
+    color: #198754;
+    transition: transform 0.2s ease;
+}
+
+.coach-card.open .coach-arrow {
+    transform: rotate(180deg);
+}
+
+.coach-seats {
+    display: none;
+    padding: 20px 15px 24px;
+    background: #f6f7f6;
+    border-top: 1px solid #eee;
+}
+
+.coach-card.open .coach-seats {
+    display: block;
+}
+
+.coach-seats h3 {
+    margin: 0 0 18px;
+    text-align: center;
+    font-size: 15px;
+    color: #333;
+}
+
+.seat-grid {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.seat {
+    width: 100%;
+    min-width: 0;
+}
+
+.seat input {
+    display: none;
+}
+
+.seat label {
+    width: 100%;
+    height: 56px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 5px;
+    border: 2px solid #cbd3ce;
+    border-radius: 9px;
+    background: #fff;
+    color: #333;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.15s ease;
+}
+
+.seat label span {
+    font-size: 10px;
+    line-height: 1;
+}
+
+.seat label strong {
+    font-size: 16px;
+    line-height: 1;
+}
+
+.seat label:hover {
+    border-color: #198754;
+    background: #f2faf5;
+}
+
+.seat input:checked + label {
+    background: #198754;
+    border-color: #146c43;
+    color: #fff;
+}
+
+.seat-reserved {
+    width: 100%;
+    height: 56px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 5px;
+    border: 2px solid #e0b5ba;
+    border-radius: 9px;
+    background: #f8d7da;
+    color: #842029;
+    text-align: center;
+    overflow: hidden;
+}
+
+.seat-reserved span {
+    font-size: 9px;
+    line-height: 1;
+}
+
+.seat-reserved strong {
+    font-size: 16px;
+    line-height: 1;
+}
+
+.seat-vip label {
+    background: #fff8dc;
+    border-color: #d6b84c;
+    color: #765f00;
+}
+
+.seat-vip label:hover {
+    background: #fff1b5;
+    border-color: #b99720;
+}
+
+.seat-vip input:checked + label {
+    background: #198754;
+    border-color: #146c43;
+    color: #fff;
+}
+
+.selected-seat-box {
+    width: 100%;
+    max-width: 340px;
+    margin: 16px auto 0;
+    padding: 11px 14px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    background: #fff;
+    text-align: center;
+}
+
+.selected-seat-box p {
+    margin: 0;
+    font-size: 13px;
+    color: #444;
+}
+
+.continue-button {
+    display: block;
+    width: 100%;
+    max-width: 340px;
+    margin: 14px auto 0;
+    padding: 11px 16px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
+    .coach-seats {
+        padding: 18px 12px 22px;
+    }
+
+    .seat-grid {
+        max-width: 300px;
+        gap: 8px;
+    }
+
+    .seat label,
+    .seat-reserved {
+        height: 52px;
+    }
+
+    .seat label strong,
+    .seat-reserved strong {
+        font-size: 15px;
+    }
+
+
+}
+
+@media (max-width: 380px) {
+.seat-grid {
+        max-width: 270px;
+        gap: 7px;
+    }
+
+    .seat label,
+    .seat-reserved {
+        height: 50px;
+    }
+
+}
+
+/* =========================================
+مدیریت کاربران
+========================================= */
+
+.users-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    }
+    
+    .users-table {
+    width: 100%;
+    border-collapse: collapse;
+    }
+    
+    .users-table th,
+    .users-table td {
+    padding: 16px 14px;
+    text-align: right;
+    border-bottom: 1px solid #eeeeee;
+    }
+    
+    .users-table thead th {
+    background: #f8f9fb;
+    font-weight: 700;
+    }
+    
+    .users-table tbody tr {
+    transition: background 0.2s ease;
+    }
+    
+    .users-table tbody tr:hover {
+    background: #fafafa;
+    }
+    
+    /* ستون عملیات */
+    
+    .actions-header {
+    width: 120px;
+    }
+    
+    /* دکمه‌های ویرایش و حذف */
+    
+    .user-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+    opacity: 0;
+    visibility: hidden;
+    
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease;
+    
+    }
+    
+    .users-table tbody tr:hover .user-actions {
+    opacity: 1;
+    visibility: visible;
+    }
+    
+    .action-button {
+    width: 38px;
+    height: 38px;
+    
+    border: none;
+    border-radius: 10px;
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    text-decoration: none;
+    
+    cursor: pointer;
+    
+    font-size: 17px;
+    
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+    
+    }
+    
+    .action-button:hover {
+    transform: translateY(-2px);
+    }
+    
+    .edit-button {
+    background: #eef5ff;
+    }
+    
+    .edit-button:hover {
+    background: #dceaff;
+    }
+    
+    .delete-button {
+    background: #fff0f0;
+    }
+    
+    .delete-button:hover {
+    background: #ffe0e0;
+    }
+    
+    .empty-users {
+    text-align: center !important;
+    padding: 35px !important;
+    }
+
+
+    /* =================================
+   Admin Edit Form
+================================= */
+
+.admin-form-group {
+    margin-bottom: 20px;
+}
+
+.admin-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+
+.admin-form-control {
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.admin-form-control:focus {
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+
+.admin-save-button {
+
+    border: none;
+
+    cursor: pointer;
+
+    padding: 14px 28px;
+
+    border-radius: 14px;
+
+    font-size: 15px;
+
+}
+
+
+.toast-message {
+
+    position: fixed;
+
+    top: 25px;
+
+    right: 25px;
+
+    background: #16a34a;
+
+    color: white;
+
+    padding: 15px 25px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+
+    z-index: 9999;
+
+    animation: slideIn .4s ease;
+
+}
+
+
+.toast-message.hide {
+
+    opacity: 0;
+
+    transform: translateY(-20px);
+
+    transition: .5s;
+
+}
+
+
+@keyframes slideIn {
+
+    from {
+        opacity:0;
+        transform:translateY(-30px);
+    }
+
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+.delete-user-form {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.delete-user-form .delete-button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   ADMIN DASHBOARD
+   ========================================================= */
+
+.admin-dashboard {
+    padding: 35px 0 60px;
+}
+
+
+/* هدر داشبورد */
+
+.admin-hero {
+    background: linear-gradient(
+        135deg,
+        #1f2937,
+        #111827
+    );
+
+    border-radius: 24px;
+
+    padding: 35px;
+
+    color: white;
+
+    margin-bottom: 30px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .12);
+}
+
+
+.admin-hero::after {
+    content: "✈";
+
+    position: absolute;
+
+    left: 35px;
+    top: 10px;
+
+    font-size: 120px;
+
+    opacity: .06;
+
+    transform: rotate(-15deg);
+}
+
+
+.admin-hero h1 {
+    margin: 0 0 10px;
+
+    font-size: 30px;
+}
+
+
+.admin-hero p {
+    margin: 0;
+
+    opacity: .8;
+
+    font-size: 15px;
+}
+
+
+/* عنوان دسترسی سریع */
+
+.dashboard-title {
+    margin: 0 0 18px;
+
+    font-size: 20px;
+
+    font-weight: 800;
+}
+
+
+/* شبکه کارت‌ها */
+
+.admin-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 30px;
+}
+
+
+/* کارت مدیریت */
+
+.admin-card {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    min-height: 135px;
+
+    padding: 22px;
+
+    background: white;
+
+    border: 1px solid #eef0f3;
+
+    border-radius: 20px;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
+}
+
+
+.admin-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, .10);
+
+    border-color: #d9dee5;
+}
+
+
+/* آیکون */
+
+.admin-card-icon {
+    width: 62px;
+
+    height: 62px;
+
+    min-width: 62px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: #f3f4f6;
+
+    font-size: 30px;
+}
+
+
+/* متن کارت */
+
+.admin-card-content {
+    flex: 1;
+}
+
+
+.admin-card-content h3 {
+    margin: 0 0 7px;
+
+    font-size: 17px;
+
+    font-weight: 800;
+}
+
+
+.admin-card-content p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* فلش */
+
+.admin-card-arrow {
+    font-size: 22px;
+
+    color: #999;
+
+    transition:
+        transform .2s ease,
+        color .2s ease;
+}
+
+
+.admin-card:hover .admin-card-arrow {
+    transform: translateX(-5px);
+
+    color: #222;
+}
+
+
+/* باکس خوش‌آمدگویی */
+
+.admin-welcome {
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    border: 1px solid #eef0f3;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .05);
+}
+
+
+.admin-welcome .card-body {
+    padding: 28px;
+}
+
+
+.admin-welcome h3 {
+    margin-top: 0;
+
+    font-size: 20px;
+}
+
+
+.admin-welcome p {
+    color: #666;
+
+    line-height: 2;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .admin-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .admin-dashboard {
+        padding-top: 20px;
+    }
+
+
+    .admin-hero {
+        padding: 25px;
+
+        border-radius: 20px;
+    }
+
+
+    .admin-hero h1 {
+        font-size: 24px;
+    }
+
+
+    .admin-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .admin-card {
+        min-height: 110px;
+    }
+
+}
+
+
+.date-field {
+    position: relative;
+}
+
+.date-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.date-input-wrapper input {
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 45px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.date-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.pwt-datepicker-container {
+    z-index: 99999 !important;
+}
+
+.pwt-datepicker-container {
+    font-family:
+        Tahoma,
+        Arial,
+        sans-serif;
+}
+
+.pwt-datepicker-container .datepicker-plot-area {
+    border-radius: 14px !important;
+}
+
+@media (max-width: 768px) {
+
+    .date-input-wrapper input {
+        font-size: 14px;
+    }
+
+}
+
+
+
