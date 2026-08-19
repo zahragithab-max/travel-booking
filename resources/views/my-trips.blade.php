@@ -244,7 +244,38 @@
                             </strong>
 
                         </p>
+                        @if (($booking['status'] ?? 'confirmed') === 'cancelled')
 
+<p>
+    ❌ این بلیت لغو شده است.
+</p>
+
+@else
+
+<form
+    action="/booking/cancel"
+    method="POST"
+    onsubmit="return confirm('آیا مطمئن هستید که می‌خواهید این بلیت را لغو کنید؟');"
+>
+
+    @csrf
+
+    <input
+        type="hidden"
+        name="booking_id"
+        value="{{ $booking['id'] }}"
+    >
+
+    <button
+        type="submit"
+        class="login-btn"
+    >
+        ❌ لغو بلیت
+    </button>
+
+</form>
+
+@endif
 
                     </div>
 

@@ -38,6 +38,8 @@ class Booking extends Model
 
         'tracking_code',
 
+        'status',
+
     ];
 
 

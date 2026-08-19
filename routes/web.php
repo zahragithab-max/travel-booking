@@ -749,6 +749,25 @@ Route::post('/register', function (Request $request) {
 
 });
 
+Route::post('/booking/cancel', function (Request $request) {
+
+    if (!auth()->check()) {
+        return redirect('/login');
+    }
+
+    $booking = \App\Models\Booking::where('id', $request->booking_id)
+        ->where('user_id', auth()->id())
+        ->firstOrFail();
+
+    $booking->update([
+        'status' => 'cancelled',
+    ]);
+
+    session()->forget('booking');
+
+    return redirect('/my-trips');
+
+});
 
 /*
 |--------------------------------------------------------------------------
