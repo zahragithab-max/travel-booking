@@ -555,6 +555,12 @@ Route::get('/booking-success', function (Request $request) {
             $trackingCode,
 
     ]);
+
+    $user = auth()->user();
+
+$user->notify(new \App\Notifications\BookingCreated($booking));
+
+
 /*
     |--------------------------------------------------------------------------
     | ذخیره رزرو در Session
