@@ -671,20 +671,13 @@ function continueBooking() {
 
     }
 
+    let finalPrice = @json($price);
 
+if (selectedTicket === 'vip') {
+    finalPrice = @json($vip_price);
+}
 
-    let finalPrice =
-        @json($price);
-
-
-    if (
-        selectedTicket === 'vip'
-    ) {
-
-        finalPrice =
-            @json($vip_price);
-
-    }
+finalPrice = finalPrice * passengerCount;
 
 
 
